@@ -34,7 +34,16 @@
     { "type": "wokwi-gnd", "id": "gnd2", "top": -76.8, "left": 85.8, "attrs": {} },
     { "type": "wokwi-vcc", "id": "vcc3", "top": -124.04, "left": 48, "attrs": {} },
     { "type": "wokwi-vcc", "id": "vcc4", "top": 250.36, "left": 115.2, "attrs": {} },
-    { "type": "wokwi-gnd", "id": "gnd3", "top": 220.8, "left": 95.4, "attrs": {} }
+    { "type": "wokwi-gnd", "id": "gnd3", "top": 220.8, "left": 95.4, "attrs": {} },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 235.4,
+      "left": 267.8,
+      "attrs": { "travelLength": "30" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc5", "top": 250.36, "left": 220.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd4", "top": 278.4, "left": 498.6, "attrs": {} }
   ],
   "connections": [
     [ "led1:A", "uno:4", "green", [ "v0" ] ],
@@ -54,7 +63,15 @@
     [ "gnd2:GND", "servo1:GND", "black", [ "v0" ] ],
     [ "vcc3:VCC", "servo1:V+", "red", [ "v28.8", "h76.8" ] ],
     [ "vcc4:VCC", "uno:VIN", "red", [ "v9.6", "h19.2" ] ],
-    [ "gnd3:GND", "uno:GND.2", "black", [ "v-9.6", "h24.9" ] ]
+    [ "gnd3:GND", "uno:GND.2", "black", [ "v-9.6", "h24.9" ] ],
+    [ "pot1:VCC", "vcc5:VCC", "red", [ "h0" ] ],
+    [ "pot1:GND", "gnd4:GND", "black", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "h0" ] ]
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "serialMonitor": {
+  "display": "auto",
+  "newline": "lf",
+  "convertEol": false
+}
 }
