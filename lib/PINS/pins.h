@@ -2,9 +2,9 @@
 #define PINS_H
 
 //signals:
-#define LO PIN_PB4 //4  
-#define SOE PIN_PB3 //3  
-#define SODS PIN_PB2 //2
+#define LO A1 //4  
+#define SOE A2 //3  
+#define SODS A3 //2
 
 //232
 #define RTS_MPU PIN_PB1 //1  
@@ -15,7 +15,7 @@
 //Feeding
 #define STEP_FM 12 //28
 #define DIR_FM 11 //23
-#define EN_FM PIN_PC6 //22
+#define EN_FM PIN_PC6 22 //22
 #define NSLEEP_FM PIN_PC5 //21
 
 //Disk
