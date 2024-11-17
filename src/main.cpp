@@ -79,7 +79,7 @@ void loop()
   }
   stateMachineUpdate();
   delay(100);
-  Serial.println(ms);
+  //Serial.println(ms);
 }
 
 bool DISK_DIR_CW = true; // directie disk clockwise
@@ -137,7 +137,9 @@ inline void runFunction(int i)
     break;
   case 3:
   {
-    //.println(targetStepsFM);
+    Serial.print(targetStepsDisk); // telemetrie
+    Serial.print(' ');
+    Serial.println(currentStepsDisk);
   }
   break;
   default:
